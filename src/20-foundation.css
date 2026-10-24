@@ -1,0 +1,127 @@
+/* Border 1.13.5's pane/card vocabulary, rebuilt around native Obsidian layout.
+   Window buttons, drag regions, split sizing and platform chrome stay native. */
+body {
+  --lyt-prism-theme-active: 1;
+  --font-text-theme: "DM Sans";
+  --font-interface-theme: "DM Sans";
+  --font-monospace-theme: "DM Mono";
+  --lyt-prism-card-radius: 14px;
+  --lyt-prism-card-gap: 12px;
+  --lyt-prism-motion-duration: 0ms;
+  --lyt-prism-transition: var(--lyt-prism-motion-duration) ease;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 14px;
+  --tab-radius: 9px;
+  --tab-radius-active: 9px;
+  --input-radius: 7px;
+  --button-radius: 7px;
+  --callout-radius: 10px;
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.22;
+  --blockquote-border-thickness: 3px;
+  --blockquote-border-color: var(--lyt-prism-italic-color);
+  --checkbox-radius: 4px;
+  --checkbox-color: var(--lyt-prism-tag-color);
+  --checkbox-color-hover: var(--lyt-prism-tag-color);
+  --checkbox-border-color: var(--text-muted);
+  --tag-radius: 5px;
+  --tag-padding-x: 0.4em;
+  --tag-padding-y: 0.12em;
+  --table-border-width: 1px;
+  --table-header-weight: 600;
+  --nav-item-radius: 6px;
+  --nav-item-background-active: var(--background-modifier-hover);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-weight-active: 600;
+  --status-bar-border-width: 0;
+  --titlebar-background: var(--background-secondary);
+  --titlebar-background-focused: var(--background-secondary);
+  --ribbon-background: var(--background-secondary);
+  --tab-container-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --divider-color: var(--background-modifier-border);
+  --workspace-background-translucent: var(--background-secondary);
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace {
+  background-color: var(--background-secondary);
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace-split.mod-root {
+  gap: var(--lyt-prism-card-gap);
+  padding-bottom: var(--lyt-prism-card-gap);
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace.is-left-sidedock-open > .mod-left-split {
+  margin-right: var(--lyt-prism-card-gap);
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace.is-right-sidedock-open > .mod-right-split {
+  margin-left: var(--lyt-prism-card-gap);
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace-split .workspace-tabs:not(.mod-stacked) > .workspace-tab-container {
+  border-radius: var(--lyt-prism-card-radius);
+  box-shadow: 0 0 0 1px var(--background-modifier-border), 0 5px 18px var(--lyt-prism-shadow-color);
+  overflow: hidden;
+}
+
+body:not(.is-mobile):not(.lyt-prism-flat-layout) .workspace-tabs.mod-stacked > .workspace-tab-container {
+  border-radius: var(--lyt-prism-card-radius);
+  overflow-x: auto;
+}
+
+.workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--text-normal);
+}
+
+.nav-file-title.is-active {
+  box-shadow: inset 2px 0 0 var(--lyt-prism-cyan);
+}
+
+.nav-folder-title {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type="outline"] .tree-item-children {
+  border-inline-start-color: var(--background-modifier-border);
+}
+
+.workspace-leaf-content[data-type="empty"] .empty-state-title {
+  color: var(--text-normal);
+  letter-spacing: -0.03em;
+}
+
+.workspace-leaf-content[data-type="empty"] .empty-state-action {
+  border-radius: var(--radius-m);
+}
+
+.canvas-node-container {
+  border-color: var(--background-modifier-border);
+  border-radius: var(--radius-m);
+}
+
+.canvas-node.is-selected .canvas-node-container {
+  border-color: var(--interactive-accent);
+}
+
+.canvas-controls-group,
+.canvas-card-menu,
+.graph-controls,
+.bases-toolbar {
+  border-radius: var(--radius-m);
+}
+
+.metadata-container {
+  border-color: var(--background-modifier-border);
+  border-radius: var(--radius-m);
+}
+
+.status-bar {
+  color: var(--text-muted);
+}
+.nav-file-tag {
+  background-color: transparent;
+}

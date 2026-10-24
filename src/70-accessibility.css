@@ -1,0 +1,66 @@
+/* Keyboard focus is visible without replacing native control geometry. */
+body :is(button, a, input, select, textarea, [tabindex="0"]):focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+body.lyt-prism-reduce-motion {
+  --lyt-prism-motion-duration: 0ms !important;
+  --lyt-prism-reveal-duration: 0ms !important;
+  --lyt-prism-shelf-delay: 0ms !important;
+  --lyt-prism-shelf-clip-delay: 0ms !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    --lyt-prism-motion-duration: 0ms !important;
+    --lyt-prism-reveal-duration: 0ms !important;
+    --lyt-prism-shelf-delay: 0ms !important;
+    --lyt-prism-shelf-clip-delay: 0ms !important;
+  }
+}
+
+/* Touch-only desktop devices also avoid hover-only scrollbar affordances. */
+@media (hover: none), (pointer: coarse) {
+  body {
+    --scrollbar-thumb-bg: var(--background-modifier-border-hover);
+  }
+}
+
+@media (forced-colors: active) {
+  .workspace-tab-header.is-active .workspace-tab-header-inner {
+    outline: 1px solid Highlight;
+  }
+
+  .lyt-prism-focus-mode .markdown-source-view.mod-cm6 .cm-content > .cm-line {
+    color: CanvasText;
+    opacity: 1;
+  }
+}
+
+@media print {
+  body.theme-dark,
+  body.theme-light {
+    --background-primary: #ffffff;
+    --text-normal: #242424;
+    --bold-color: #242424;
+    --italic-color: #333333;
+    --link-color: #333333;
+    --link-external-color: #333333;
+    --tag-color: #333333;
+    --code-normal: #242424;
+    --code-background: #f3f3f3;
+    --h1-color: #242424;
+    --h2-color: #242424;
+    --h3-color: #242424;
+    --h4-color: #242424;
+    --h5-color: #242424;
+    --h6-color: #242424;
+  }
+
+  .markdown-rendered {
+    background: #ffffff;
+    color: #242424;
+  }
+
+}

@@ -1,0 +1,56 @@
+/* Mobile retains Obsidian's native navigation, gestures and control sizing.
+   No desktop auto-hide declaration applies here, even with synced settings. */
+.is-mobile {
+  --tab-background-active: var(--background-modifier-hover);
+  --mobile-sidebar-background: var(--background-secondary);
+}
+
+.is-mobile .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background-color: var(--background-modifier-hover);
+}
+
+.is-mobile .workspace-drawer,
+.is-mobile .workspace-drawer-inner {
+  background-color: var(--background-secondary);
+}
+
+.is-mobile .workspace-leaf-content[data-type="empty"] .empty-state-action-list {
+  gap: 16px;
+}
+
+.is-mobile .workspace-leaf-content[data-type="empty"] .empty-state-action {
+  min-height: var(--touch-size-m);
+}
+
+.is-mobile .mobile-navbar {
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.is-tablet.lyt-prism-tablet-cards .workspace {
+  gap: var(--lyt-prism-card-gap);
+  padding: var(--lyt-prism-card-gap);
+  background-color: var(--background-secondary);
+}
+
+.is-tablet.lyt-prism-tablet-cards .workspace-split.mod-root,
+.is-tablet.lyt-prism-tablet-cards .workspace-drawer {
+  border-radius: var(--lyt-prism-card-radius);
+  box-shadow: 0 0 0 1px var(--background-modifier-border);
+  overflow: hidden;
+}
+
+.is-phone.lyt-prism-phone-full-drawer .workspace-drawer {
+  width: 100vw;
+  max-width: 100vw;
+  border-radius: 0;
+}
+
+/* Narrow native panes keep their content shrinkable without horizontal drag. */
+.is-mobile .metadata-container,
+.is-mobile .callout {
+  min-width: 0;
+}
+
+.is-mobile .markdown-rendered pre {
+  overflow-x: auto;
+}

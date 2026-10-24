@@ -1,0 +1,32 @@
+{
+  "name": "focus-lyt-theme",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Focus-LYT: LYT colors with accessible Border-inspired automation for Obsidian.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "package": "node scripts/build.mjs --package",
+    "test": "playwright test",
+    "test:container": "bash scripts/test-container.sh",
+    "check:docs": "node scripts/check-docs.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.60.0",
+    "postcss": "8.5.31",
+    "yaml": "2.9.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BleonHys/LYT-Mode-Updated.git"
+  },
+  "homepage": "https://github.com/BleonHys/LYT-Mode-Updated",
+  "bugs": {
+    "url": "https://github.com/BleonHys/LYT-Mode-Updated/issues"
+  }
+}

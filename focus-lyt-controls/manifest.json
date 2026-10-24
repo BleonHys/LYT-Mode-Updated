@@ -1,0 +1,10 @@
+{
+  "id": "focus-lyt-controls",
+  "name": "Focus-LYT Controls",
+  "version": "1.0.0",
+  "minAppVersion": "1.8.10",
+  "description": "A subtle tab handle and lock button for the Focus-LYT theme. Requires Style Settings for pinning.",
+  "author": "BleonHys",
+  "isDesktopOnly": false,
+  "authorUrl": "https://github.com/BleonHys"
+}

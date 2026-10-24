@@ -1,0 +1,38 @@
+name: Bug report
+description: Report a reproducible styling or focus-control problem.
+title: 'Bug: '
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the expected behavior and the steps to reproduce the problem.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Obsidian, Focus-LYT, operating system and, if used, Focus-LYT Controls.
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Color mode
+      options:
+        - Dark
+        - Light
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Relevant settings and plugins
+      description: Include auto-hide/pin settings, snippets and plugins that affect the interface.
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or sample note
+      description: Use a sample note without private content when possible.

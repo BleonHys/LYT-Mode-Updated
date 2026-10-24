@@ -1,0 +1,72 @@
+/* The handle disappears only after the actual toolbar is fully revealed.
+   The lock is part of the native tab row, so it cannot cover an existing tab. */
+.focus-lyt-trigger,
+.focus-lyt-pin {
+  display: none;
+  -webkit-app-region: no-drag;
+}
+body:not(.is-mobile).lyt-prism-controls-enabled.lyt-prism-autohide-tabs:not(.lyt-prism-pin-bars) .focus-lyt-trigger {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+  transform: translateX(-50%);
+  z-index: 49;
+  border: 1px solid var(--background-modifier-border);
+  border-top: 0;
+  border-radius: 0 0 9px 9px;
+  box-shadow: none;
+  background: var(--background-secondary);
+  color: var(--text-muted);
+  opacity: var(--lyt-prism-trigger-opacity, 1);
+  visibility: var(--lyt-prism-trigger-visibility, visible);
+  transition: opacity var(--lyt-prism-reveal-duration, 160ms) ease var(--lyt-prism-trigger-opacity-delay, 0ms),
+              visibility 0s linear var(--lyt-prism-trigger-visibility-delay, 0ms);
+}
+.focus-lyt-trigger svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 1.6px;
+  opacity: .65;
+}
+.focus-lyt-trigger:is(:hover, :focus-visible) svg { opacity: 1; }
+body:not(.is-mobile).lyt-prism-controls-enabled.lyt-prism-autohide-tabs .focus-lyt-pin {
+  display: flex;
+  flex: 0 0 28px;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-height: 28px;
+  padding: 4px;
+  margin-inline: 2px;
+  box-shadow: none;
+  background: transparent;
+  color: var(--text-muted);
+}
+.focus-lyt-pin svg { width: 16px; height: 16px; }
+.focus-lyt-pin[aria-pressed="true"] { color: var(--interactive-accent); }
+.focus-lyt-pin:hover { background: var(--background-modifier-hover); }
+
+.focus-lyt-control-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+/* Keep the disclosure reachable while keyboard focus is on it. */
+body:not(.is-mobile).lyt-prism-controls-enabled.lyt-prism-autohide-tabs:not(.lyt-prism-pin-bars) .focus-lyt-trigger:focus-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: none;
+}

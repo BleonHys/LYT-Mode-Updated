@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest an improvement to Focus-LYT.
+title: 'Feature: '
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What would this help you do?
+      description: Describe the workflow and the problem you want to solve.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Suggested behavior
+      description: Include examples or references if useful.

@@ -1,6 +1,7 @@
-{  
-   "name": "LYT Mode",  
-   "version": "1.9.1",  
-   "minAppVersion": "1.0",  
-   "author": "Nick Milo"
+{
+  "name": "Focus-LYT",
+  "version": "1.0.0",
+  "minAppVersion": "1.8.10",
+  "author": "BleonHys",
+  "authorUrl": "https://github.com/BleonHys"
 }
