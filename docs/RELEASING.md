@@ -14,6 +14,8 @@ Focus-LYT is an independent theme. Its GitHub repository is [BleonHys/LYT-Mode-U
 
 Only the release job has `contents: write`; ordinary CI has read-only permissions. Workflow action versions are pinned to commits. The release workflow requires GitHub Actions to be enabled for the repository. Pushing a matching version tag is the publishing step.
 
+If the initial tag does not trigger a run, open **Actions → Publish theme release → Run workflow**, choose `main` and enter the existing version tag, such as `1.0.0`. This checks out that exact tag and applies the same checks before publishing. It does not move or recreate the tag.
+
 Theme users receive `theme.css` and `manifest.json`. Complete MIT and font license notices are included in the generated CSS because the theme installer does not fetch the repository's separate license files. The ZIP also carries those files, the example notes and the optional companion. The companion is installed separately and is not part of the theme-directory installation.
 
 ## Submit to the community directory
