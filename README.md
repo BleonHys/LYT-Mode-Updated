@@ -2,7 +2,7 @@
 
 **Space to think. Color to connect.**
 
-[Deutsch](README.de.md) · [Install](#install) · [Focus controls](#focus-controls) · [Development](docs/DEVELOPMENT.md) · [Changelog](CHANGELOG.md)
+[Deutsch](README.de.md) · [Install](#install) · [Focus controls](#focus-controls) · [Changelog](CHANGELOG.md)
 
 An Obsidian theme built around the colors and typography of [LYT Mode](https://github.com/nickmilo/LYT-Mode), with a workspace and auto-hide behavior inspired by [Border](https://github.com/Akifyss/obsidian-border). Focus-LYT brings these foundations together with a light palette and optional controls that keep the note at the center of your workspace.
 
@@ -34,12 +34,11 @@ These are real Obsidian screenshots from the included [demo note](examples/vault
 
 ## Install
 
-Focus-LYT is currently installed manually; it is not yet listed in Obsidian's community theme browser. No build tools are needed to use the theme.
+Focus-LYT is currently installed manually; it is not yet listed in Obsidian's community theme browser.
 
-1. On this repository's GitHub page, choose **Code → Download ZIP** and extract it.
-2. Open your vault's configuration folder, normally `.obsidian`, and create `themes/Focus-LYT/` inside it.
-3. Copy the following items from the repository root into that new folder: `theme.css`, `manifest.json`, `LICENSE`, `THIRD-PARTY-NOTICES.md` and the entire `licenses` folder.
-4. In Obsidian, open **Settings → Appearance → Themes** and select **Focus-LYT**. If it is not shown yet, reload Obsidian.
+1. Download [Focus-LYT 1.0.0](https://github.com/BleonHys/LYT-Mode-Updated/releases/download/1.0.0/focus-lyt-1.0.0.zip) and extract it.
+2. Copy the included **Focus-LYT** folder into your vault's `.obsidian/themes/` folder.
+3. In Obsidian, open **Settings → Appearance → Themes** and select **Focus-LYT**. If it is not shown yet, reload Obsidian.
 
 The resulting structure should be:
 
@@ -67,7 +66,7 @@ The theme works on its own. These optional additions unlock more controls:
 Auto-hide is optional. For the arrow and lock shown below:
 
 1. Install and enable **Style Settings**.
-2. Copy the repository's entire `focus-lyt-controls` folder into `<vault>/.obsidian/plugins/`. Its `manifest.json`, `main.js` and `styles.css` must sit directly inside that folder.
+2. Copy the `focus-lyt-controls` folder from the release ZIP into `<vault>/.obsidian/plugins/`. Its `manifest.json`, `main.js` and `styles.css` must sit directly inside that folder.
 3. Reload Obsidian and enable **Focus-LYT Controls** under **Settings → Community plugins**.
 4. Open **Style Settings → Focus-LYT → Ein- und Ausblenden** and enable **Notiz-Tabs automatisch ausblenden**.
 
@@ -112,15 +111,15 @@ Each auto-hide starts disabled and can be toggled separately. **Leisten anheften
 
 ## Compatibility and feedback
 
-The minimum supported Obsidian version is **1.8.10**. Container checks use real Obsidian **1.8.10** and **1.14.4** on Linux, with **Style Settings 1.0.9**. They cover editing, note views, split panes, focus controls, maximized windows and emulated touch layouts. The [test report](TEST-REPORT.md) records the results and scope.
+The minimum supported Obsidian version is **1.8.10**. Focus-LYT has been tested with Obsidian **1.8.10** and **1.14.4** on Linux, with **Style Settings 1.0.9**, including editing, note views, split panes, focus controls, maximized windows and emulated touch layouts.
 
 Native Windows/macOS window controls and physical iOS/Android devices have not been verified. Other community plugins may need their own styling.
 
 For a bug report, [open an issue](https://github.com/BleonHys/LYT-Mode-Updated/issues/new/choose) with your Obsidian, theme and operating-system versions, color mode, relevant plugins/settings and steps to reproduce it. A screenshot from a sample note is especially useful.
 
-## Development
+## Contributing
 
-Source modules, build instructions, container tests, packaging and reproducible screenshot capture are documented in [Development](docs/DEVELOPMENT.md). The [example vault](examples/README.md) is available for trying both palettes. See [Contributing](CONTRIBUTING.md) for changes and [Release and submission](docs/RELEASING.md) for publishing.
+Suggestions and improvements are welcome. See [Contributing](CONTRIBUTING.md). The [example vault](examples/README.md) is available for trying both palettes. Maintainers can find publishing and directory details in [Release and submission](docs/RELEASING.md).
 
 ## Credits and license
 

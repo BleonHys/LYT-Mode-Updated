@@ -2,7 +2,7 @@
 
 **Raum zum Denken. Farbe für Verbindungen.**
 
-[English](README.md) · [Installation](#installation) · [Fokus-Bedienung](#fokus-bedienung) · [Entwicklung](docs/DEVELOPMENT.md) · [Changelog](CHANGELOG.md)
+[English](README.md) · [Installation](#installation) · [Fokus-Bedienung](#fokus-bedienung) · [Changelog](CHANGELOG.md)
 
 Ein Obsidian-Theme auf Grundlage der Farben und Typografie von [LYT Mode](https://github.com/nickmilo/LYT-Mode), mit einer von [Border](https://github.com/Akifyss/obsidian-border) inspirierten Oberfläche und automatischen Einblendungen. Focus-LYT verbindet diese Grundlagen mit einem hellen Farbschema und optionalen Bedienelementen, die deine Notiz in den Mittelpunkt stellen.
 
@@ -34,12 +34,11 @@ Die Aufnahmen stammen aus echtem Obsidian und zeigen die mitgelieferte [Beispiel
 
 ## Installation
 
-Focus-LYT wird derzeit manuell installiert und ist noch nicht im Community-Theme-Verzeichnis von Obsidian gelistet. Für die Nutzung werden keine Build-Werkzeuge benötigt.
+Focus-LYT wird derzeit manuell installiert und ist noch nicht im Community-Theme-Verzeichnis von Obsidian gelistet.
 
-1. Auf der GitHub-Seite dieses Projekts **Code → Download ZIP** wählen und die Datei entpacken.
-2. Im Konfigurationsordner deines Vaults, normalerweise `.obsidian`, den Unterordner `themes/Focus-LYT/` erstellen.
-3. Aus dem Hauptverzeichnis des Projekts diese Dateien hineinkopieren: `theme.css`, `manifest.json`, `LICENSE`, `THIRD-PARTY-NOTICES.md` und den gesamten Ordner `licenses`.
-4. In Obsidian unter **Einstellungen → Darstellung → Themes** das Theme **Focus-LYT** auswählen. Falls es noch nicht erscheint, Obsidian neu laden.
+1. [Focus-LYT 1.0.0 herunterladen](https://github.com/BleonHys/LYT-Mode-Updated/releases/download/1.0.0/focus-lyt-1.0.0.zip) und entpacken.
+2. Den enthaltenen Ordner **Focus-LYT** nach `<Vault>/.obsidian/themes/` kopieren.
+3. In Obsidian unter **Einstellungen → Darstellung → Themes** das Theme **Focus-LYT** auswählen. Falls es noch nicht erscheint, Obsidian neu laden.
 
 Danach sollte die Struktur so aussehen:
 
@@ -67,7 +66,7 @@ Das Theme funktioniert allein. Diese optionalen Ergänzungen bieten weitere Mög
 Das automatische Ausblenden ist optional. Für Pfeil und Schloss aus den folgenden Bildern:
 
 1. **Style Settings** installieren und aktivieren.
-2. Den gesamten Projektordner `focus-lyt-controls` nach `<Vault>/.obsidian/plugins/` kopieren. `manifest.json`, `main.js` und `styles.css` müssen direkt darin liegen.
+2. Den Ordner `focus-lyt-controls` aus dem Release-ZIP nach `<Vault>/.obsidian/plugins/` kopieren. `manifest.json`, `main.js` und `styles.css` müssen direkt darin liegen.
 3. Obsidian neu laden und **Focus-LYT Controls** unter **Einstellungen → Community-Plugins** aktivieren.
 4. Unter **Style Settings → Focus-LYT → Ein- und Ausblenden** den Schalter **Notiz-Tabs automatisch ausblenden** einschalten.
 
@@ -110,15 +109,15 @@ Alle Auto-Hides beginnen ausgeschaltet und lassen sich einzeln aktivieren. **Lei
 
 ## Kompatibilität und Rückmeldungen
 
-Die Mindestversion ist **Obsidian 1.8.10**. Containertests verwenden echtes Obsidian **1.8.10** und **1.14.4** unter Linux mit **Style Settings 1.0.9**. Sie prüfen unter anderem Bearbeitung, Notizansichten, geteilte Ansichten, Fokus-Bedienelemente, maximierte Fenster und emulierte Touch-Oberflächen. Ergebnisse und Umfang stehen im [Testbericht](TEST-REPORT.md).
+Die Mindestversion ist **Obsidian 1.8.10**. Focus-LYT wurde mit Obsidian **1.8.10** und **1.14.4** unter Linux und **Style Settings 1.0.9** geprüft, unter anderem mit Bearbeitung, Notizansichten, geteilten Ansichten, Fokus-Bedienelementen, maximierten Fenstern und emulierten Touch-Oberflächen.
 
 Native Fensterknöpfe unter Windows/macOS und echte iOS-/Android-Geräte wurden nicht verifiziert. Andere Community-Plugins können eigene Stilanpassungen benötigen.
 
 Erstelle für Fehler [ein Issue](https://github.com/BleonHys/LYT-Mode-Updated/issues/new/choose) mit Obsidian-, Theme- und Betriebssystemversion, Farbmodus, relevanten Plugins/Einstellungen und Schritten zum Nachstellen. Ein Screenshot mit einer Beispielnotiz hilft besonders.
 
-## Entwicklung
+## Mitwirken
 
-Quellmodule, Build, Containertests, Paketierung und reproduzierbare Screenshot-Aufnahmen beschreibt die [Entwicklungsanleitung](docs/DEVELOPMENT.md). Der [Beispiel-Vault](examples/README.md) eignet sich zum Vergleichen beider Farbmodi. Hinweise für Beiträge stehen unter [Contributing](CONTRIBUTING.md); Veröffentlichung und Einreichung beschreibt [Release and submission](docs/RELEASING.md).
+Vorschläge und Verbesserungen sind willkommen; Hinweise stehen unter [Contributing](CONTRIBUTING.md). Der [Beispiel-Vault](examples/README.md) eignet sich zum Vergleichen beider Farbmodi. Veröffentlichung und Einreichung beschreibt [Release and submission](docs/RELEASING.md).
 
 ## Danksagung und Lizenz
 

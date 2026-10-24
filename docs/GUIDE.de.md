@@ -40,7 +40,7 @@ Style Settings registriert für jeden Auto-Hide-Schalter zusätzlich einen Befeh
 
 Das Release-ZIP enthält einen separaten `examples/vault`-Ordner. Als eigenen Vault öffnen und das Theme installieren. **Focus-LYT** zeigt die kurze Notiz aus den Projekt-Screenshots; **Prism Observatory** enthält weitere Beispiele für verschiedene Ansichten.
 
-Das Projekt enthält reproduzierbare Linux-Containertests mit echtem Obsidian/Electron 1.8.10 und 1.14.4 sowie Style Settings 1.0.9. Mobilzustände und Bildschirmgrößen werden darin simuliert. Native iOS-/Android-Geräte sowie macOS-/Windows-Fensterleisten sind damit nicht verifiziert. Individuelle Community-Plugins können eigene Stile benötigen.
+Das Theme wurde unter Linux mit Obsidian 1.8.10 und 1.14.4 sowie Style Settings 1.0.9 geprüft. Mobilzustände und Bildschirmgrößen wurden simuliert. Native iOS-/Android-Geräte sowie macOS-/Windows-Fensterleisten sind damit nicht verifiziert. Individuelle Community-Plugins können eigene Stile benötigen.
 
 ## Lizenz und Herkunft
 

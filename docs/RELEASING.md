@@ -1,31 +1,26 @@
 # Release and Obsidian submission
 
-[Project overview](../README.md) · [Development](DEVELOPMENT.md)
+[Project overview](../README.md)
 
-Focus-LYT is an independent theme. Its GitHub repository is [BleonHys/LYT-Mode-Updated](https://github.com/BleonHys/LYT-Mode-Updated); the installed theme name is **Focus-LYT**. Keep the theme name stable when submitting and releasing it.
+The repository contains the installable theme, documentation, screenshots, examples and optional companion. `theme.css` is the theme source and distribution file.
 
-## Prepare a release
+## Publish a release
 
-1. Update `manifest.json`, `package.json` and the root package entries in `package-lock.json` to the same `x.y.z` version. Add that version and its minimum Obsidian version to `versions.json`.
-2. Update the changelog, theme guide and `docs/RELEASE-NOTES.md`. Refresh screenshots if the appearance changes.
-3. Run `npm run build`, `npm run check`, `npm run check:docs`, `npm run test:container` and `npm run package`. Commit the source and generated `theme.css` together.
-4. Push the commit to `main`. Review the release notes and assets. Once validation passes, create and push a tag that matches the manifest **exactly**, such as `1.0.0`, without a `v` prefix.
-5. The **Publish theme release** workflow checks the tag, rebuilds the package and runs the full functional suite. After the checks pass, it publishes a GitHub release with `manifest.json`, `theme.css` and the ZIP attached.
+1. Check the theme in Obsidian and update the changelog and screenshots for any visible changes.
+2. Set the new `x.y.z` version in `manifest.json` and add its minimum Obsidian version to `versions.json`.
+3. Commit the files and create a GitHub release with a tag matching the manifest version exactly, without a `v` prefix.
+4. Attach **`manifest.json`** and **`theme.css`** as individual release assets. These are the files Obsidian installs.
 
-Only the release job has `contents: write`; ordinary CI has read-only permissions. Workflow action versions are pinned to commits. The release workflow requires GitHub Actions to be enabled for the repository. Pushing a matching version tag is the publishing step.
+An optional installation ZIP can contain a `Focus-LYT` folder with the theme files, license notices and `licenses/`. Include `focus-lyt-controls/` and example notes as separate folders. The existing [1.0.0 release](https://github.com/BleonHys/LYT-Mode-Updated/releases/tag/1.0.0) already provides this layout.
 
-If the initial tag does not trigger a run, open **Actions → Publish theme release → Run workflow**, choose `main` and enter the existing version tag, such as `1.0.0`. This checks out that exact tag and applies the same checks before publishing. It does not move or recreate the tag.
-
-Theme users receive `theme.css` and `manifest.json`. Complete MIT and font license notices are included in the generated CSS because the theme installer does not fetch the repository's separate license files. The ZIP also carries those files, the example notes and the optional companion. The companion is installed separately and is not part of the theme-directory installation.
+The companion is installed separately and is not included in the theme-directory installation. Complete MIT and font license notices are embedded in `theme.css` as well as provided in separate files.
 
 ## Submit to the community directory
 
-Follow the current [official submission guide](https://docs.obsidian.md/themes/app-themes/submit-theme). As checked on 24 October 2026, submission is through **community.obsidian.md**, rather than a new pull request to the old theme registry.
-
-After publishing the release:
+Follow the [official submission guide](https://docs.obsidian.md/themes/app-themes/submit-theme). After publishing a release:
 
 1. Sign in to [Obsidian Community](https://community.obsidian.md) with your Obsidian account and link your GitHub account.
-2. Choose **Themes → New theme** and use:
+2. Choose **Themes → New theme** and use the following details.
 
 | Field | Value |
 | --- | --- |
@@ -37,9 +32,6 @@ After publishing the release:
 | Current version | `1.0.0` |
 | Minimum Obsidian version | `1.8.10` |
 
-3. Review the directory's developer policies and maintenance commitment yourself, then submit.
-4. Resolve any automated review feedback in a new version and release.
+Review the directory's developer policies and maintenance commitment, then submit. Resolve review feedback in a new version and release.
 
-The repository contains the root README, license, manifest, generated theme, version map and screenshots. The screenshot path above points to a real 1440 × 810 demo-vault capture in the directory's recommended 16:9 aspect ratio. The directory recommends 512 × 288 pixels; the larger source keeps text clearer when viewed at full size.
-
-Submission and acceptance are separate from publishing the repository. The theme is not listed until the directory approves it. See the [manifest reference](https://docs.obsidian.md/Reference/Manifest) and [official sample theme](https://github.com/obsidianmd/obsidian-sample-theme) when changing release metadata.
+The repository provides the required theme files, README, license, version map and screenshots. The directory preview is a real 1440 × 810 demo-vault capture. Acceptance into the directory is a separate step from publishing on GitHub.

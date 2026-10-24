@@ -13,3 +13,18 @@ Thumbs.db
 .agents/
 .codex/
 .aws/
+
+# Local development tools stay outside the public theme distribution.
+/docker/
+/tests/
+/scripts/
+/src/
+/package.json
+/package-lock.json
+/playwright.config.mjs
+/.dockerignore
+/TEST-REPORT.md
+/docs/DEVELOPMENT.md
+/docs/RELEASE-NOTES.md
+/docs/images/capture.json
+/.github/workflows/
